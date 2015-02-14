@@ -48,8 +48,7 @@ class bqImporter:
 	
 	def _check_jobs_active(self):
 		''' Check to see if jobs have not been cleared '''
-		if len(self._active_jobs)>0: return True
-		else: return False
+		return len(self._active_jobs)>0 
 	
 	def run_query(self, query_str):
 		''' Execute query using bigquery-python and wait for results
